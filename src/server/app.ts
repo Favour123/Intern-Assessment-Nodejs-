@@ -29,6 +29,9 @@ app.use(morgan('dev'));
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
+app.get('/', (_req, res) => {
+  res.json({message : "Welcome to Internship GetResponse and Mailchimp API"});
+});
 
 app.use('/api/integrations', integrationsRouter);
 
